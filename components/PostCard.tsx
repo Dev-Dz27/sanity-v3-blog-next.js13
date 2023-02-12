@@ -20,7 +20,7 @@ const PostCard = ({ post }: Props) => {
             />
             <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
                <div>
-                  <p className="font-bold text-lizard_green break-words">
+                  <p className="font-bold  break-words">
                      {post.title}
                   </p>
                   <p className="text-white">
@@ -35,7 +35,7 @@ const PostCard = ({ post }: Props) => {
                   {post.categories?.map((category) => (
                      <div
                         key={nanoid()}
-                        className="bg-happy_pink text-center text-black px-3 py-1 rounded-full text-sm font-semibold">
+                        className=" bg-white text-center text-black px-3 py-1 rounded-full text-sm font-semibold">
                         <p>{category.title}</p>
                      </div>
                   ))}
@@ -43,7 +43,7 @@ const PostCard = ({ post }: Props) => {
             </div>
          </div>
          <div className="mt-5 flex-1">
-            <p className="underline text-lg text-[#F7AB0A] font-bold">
+            <p className="underline text-lg  font-bold">
                {post.title}
             </p>
             <p className="line-clamp-2 text-grey-500 ">
@@ -54,7 +54,7 @@ const PostCard = ({ post }: Props) => {
             Read Post
             <ArrowUpRightIcon className="ml-2 w-4 h-4" />
          </p>
-         <div className="absolute bg-[#F7AB0A0] w-[30%] h-[30%] bottom-[50%] top-[50%] -z-10" />
+         <div className=" bg-[#F7AB0A] w-[30%] h-[30%] bottom-[50%] top-[50%] -z-10" />
       </div>
    );
 };

@@ -13,13 +13,15 @@ const query = groq`
   } | order(_createdAt desc) //list them by the order of date descending
 `;
 
+export const revalidate = 60; //revalidate every 
+
 export default async function HomePage() {
   if (previewData()) {
     return (
       <PreviewSuspense
         fallback={
           <div role="status">
-            <p className="text-center text-lg animate-pulse text-[#F7AB0A] ">
+            <p className="text-center text-lg animate-pulse text-white ">
               Loading Preview Data...
             </p>
           </div>

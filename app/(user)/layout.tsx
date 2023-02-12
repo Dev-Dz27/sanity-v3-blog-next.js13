@@ -17,8 +17,8 @@ export default function RootLayout({
       <head />
       <body className="dark:bg-gray-800">
       <ThemeProvider attribute="class" >
-      <Banner />
       <Header />
+      <Banner />
 
         {children}
       <Footer />

@@ -6,6 +6,11 @@ import urlFor from '../../../../lib/urlFor';
 import { nanoid } from 'nanoid';
 import { PortableText } from '@portabletext/react';
 import RichTextComponents from '../../../../components/RichTextComponents';
+import { CalendarIcon } from '@heroicons/react/24/solid';
+
+
+
+
 
 interface Props {
    params: {
@@ -13,7 +18,7 @@ interface Props {
    };
 }
 
-export const revalidate = 3600;
+export const revalidate = 60; //revalidate every 
 
 export async function generateStaticParams() {
    const query = groq`*[_type == 'post']
@@ -54,13 +59,14 @@ const Post = async ({ params: { slug } }: Props) => {
                      fill
                   />
                </div>
-               <section className="p-5 post-banner-bg w-full">
+               <section className="p-5 bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg w-full ">
                   <div className="flex flex-col md:flex-row justify-between gap-y-5">
                      <div>
                         <h1 className="text-4xl font-extrabold">
                            {post.title}
                         </h1>
-                        <p>
+                        <p className='flex items-center '>
+                           <CalendarIcon className='w-6 h-6 mr-2'/>
                            {new Date(post._createdAt).toLocaleDateString(
                               'en-US',
                               {
@@ -68,7 +74,7 @@ const Post = async ({ params: { slug } }: Props) => {
                                  month: 'long',
                                  year: 'numeric',
                               },
-                           )}
+                              )}
                         </p>
                      </div>
                      <div className="flex items-center space-x-2">
@@ -81,9 +87,9 @@ const Post = async ({ params: { slug } }: Props) => {
                            />
                         </div>
                         <div className="w-64">
-                           <h3 className="text-lg font-bold">
-                              <span className="opacity-50 font-normal text-base mr-2">
-                                 author:
+                           <h3 className="text-lg font-bold text-[#bb80f4]">
+                              <span className="opacity-50 font-normal text-base  ">
+                                 @
                               </span>
                               {post.author.name}
                            </h3>
@@ -102,8 +108,8 @@ const Post = async ({ params: { slug } }: Props) => {
                      {post.categories?.map((category) => (
                         <p
                            key={nanoid()}
-                           className="bg-happy_pink  px-3 py-1 rounded-full text-sm font-semibold mt-4">
-                           {category.title}
+                           className="bg-black text-white dark:text-black dark:bg-white  px-3 py-1 rounded-full text-sm font-semibold mt-4">
+                           #{category.title}
                         </p>
                      ))}
                   </div>
@@ -115,6 +121,7 @@ const Post = async ({ params: { slug } }: Props) => {
             <div className="absolute bg-pink-gradient w-[30%] h-[30%] left-0 top-0 -z-10 opacity-30" />
             <div className="absolute bg-blue-gradient w-[30%] h-[30%] right-0 bottom-0 -z-10 opacity-40" />
          </div>
+
       </article>
    );
 };
