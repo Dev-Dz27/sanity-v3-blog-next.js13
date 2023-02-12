@@ -58,7 +58,7 @@ const Post = async ({ params: { slug } }: Props) => {
                      fill
                   />
                </div>
-               <section className="p-5 bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg w-full ">
+               <section className="p-5 bg-opacity-30 bg-black backdrop-blur-lg rounded drop-shadow-lg w-full ">
                   <div className="flex flex-col md:flex-row justify-between gap-y-5">
                      <div>
                         <h1 className="text-4xl font-extrabold">
@@ -117,8 +117,8 @@ const Post = async ({ params: { slug } }: Props) => {
          </section>
          <div className="relative z-0">
             <PortableText value={post.body} components={RichTextComponents} />
-            <div className="absolute bg-pink-gradient w-[30%] h-[30%] left-0 top-0 -z-10 opacity-30" />
-            <div className="absolute bg-blue-gradient w-[30%] h-[30%] right-0 bottom-0 -z-10 opacity-40" />
+            <div className="absolute bg-pink--gradient w-[30%] h-[30%] left-0 top-0 -z-10 opacity-30" />
+            <div className="absolute bg-blue--gradient w-[30%] h-[30%] right-0 bottom-0 -z-10 opacity-40" />
          </div>
 
       </article>

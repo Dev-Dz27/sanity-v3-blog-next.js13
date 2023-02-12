@@ -17,10 +17,10 @@ function classNames(...classes: string[]) {
 function Navbar() {
   const { theme, setTheme } = useTheme();
   const navigation = [
-    { name: "Home", href: "/", current: true },
+    { name: "Home", href: "/", current: false },
     { name: "Categories", href: "#", current: false },
     { name: "Projects", href: "#", current: false },
-    { name: "About", href: "/about", current: false },
+    { name: "About", href: "#", current: false },
   ];
 
   return (

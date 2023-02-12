@@ -16,7 +16,7 @@ export default function RootLayout({
     
     <html >
       <head />
-      <body className="dark:bg-gray-800">
+      <body className="duration-300 transition-all">
       <ThemeProvider attribute="class" >
       {/* <Header /> */}
       <Navbar />

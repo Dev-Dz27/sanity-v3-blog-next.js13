@@ -13,12 +13,12 @@
     -webkit-background-clip: text;
 }
 
-.bg-blue-gradient {
+.bg-blue--gradient {
     background: #00ffe72b;
     filter: blur(190px);
 }
 
-.bg-pink-gradient {
+.bg-pink--gradient {
     background: #e166ff;
     filter: blur(190px);
 }
