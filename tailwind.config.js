@@ -7,6 +7,9 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    // colors: {
+    //   'purple': "#bb80f4", 
+    // },
     typography: (theme) => ({}),
     extend: {},
   },

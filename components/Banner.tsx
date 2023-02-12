@@ -14,7 +14,7 @@ function Banner() {
         <h1 className="text-7xl">Youcef's Daily Blog</h1>
         <h2 className="mt-5 md:mt-2">
           Welcome to {""}
-          <span className="underline decoration-4 decoration-slate-400   ">
+          <span className="underline decoration-4 decoration-purple   ">
             favourite blog in the world
           </span>
         </h2>

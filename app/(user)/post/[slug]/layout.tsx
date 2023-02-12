@@ -21,7 +21,7 @@ export default function PostLayout({ children }: { children: ReactNode }) {
          {children}
 
          <div className="flex justify-center py-10">
-            <a href="#top">
+            <a href="#top" aria-label="Read more about Seminole tax hike">
                <ArrowUpCircleIcon className="h-10 w-10 mb-10 " />
             </a>
          </div>

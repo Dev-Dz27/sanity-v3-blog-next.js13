@@ -35,8 +35,8 @@ const PostCard = ({ post }: Props) => {
                   {post.categories?.map((category) => (
                      <div
                         key={nanoid()}
-                        className=" bg-white text-center text-black px-3 py-1 rounded-full text-sm font-semibold">
-                        <p>{category.title}</p>
+                        className=" bg-purple-500 text-center text-black px-3 py-1 rounded-full text-sm font-semibold">
+                        <p>#{category.title}</p>
                      </div>
                   ))}
                </div>
@@ -50,11 +50,12 @@ const PostCard = ({ post }: Props) => {
                {post.description}
             </p>
          </div>
-         <p className="mt-5 font-bold  flex items-center group-hover:underline">
+         <p className="mt-5  flex items-center group-hover:underline hover:text-purple-700 transition duration-200 ">
             Read Post
             <ArrowUpRightIcon className="ml-2 w-4 h-4" />
          </p>
          <div className=" bg-[#F7AB0A] w-[30%] h-[30%] bottom-[50%] top-[50%] -z-10" />
+         
       </div>
    );
 };

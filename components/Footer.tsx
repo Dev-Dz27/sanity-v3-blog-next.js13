@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { nanoid } from 'nanoid';
-import { useTheme } from "next-themes";
 import { MoonIcon } from '@heroicons/react/24/solid';
 
 
@@ -32,7 +31,6 @@ const footerData = {
 };
 
 const Footer = () => {
-   const { theme, setTheme } = useTheme();
 
    return (
       <footer aria-label="Site Footer" className="bg-gray-50 dark:bg-gray-900">
@@ -90,15 +88,7 @@ const Footer = () => {
         </svg>
       </div>
 
-       {/* Light/Dark Mode */}
-       <button className=" text-center " onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-          {theme === "dark" ? (
-            <MoonIcon className="h-6 w-6" />
-          ) : (
-            <MoonIcon className="h-6 w-6 text-black" />
-          )}
-        </button>
-        {/* Light/Dark Mode */}
+      
       <p
         className="mt-4 text-center text-sm text-gray-500 dark:text-gray-400 lg:mt-0 lg:text-right"
       >
