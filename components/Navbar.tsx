@@ -31,7 +31,9 @@ function Navbar() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button 
+                aria-label="mobile menu"
+                className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -87,9 +89,10 @@ function Navbar() {
                 <div
                   //   className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
-                  <span className="sr-only">View notifications</span>
+                  {/* <span className="sr-only">View notifications</span> */}
                   {/* Light/Dark Mode */}
                   <button
+                  aria-label="dark mode toggle"
                     className=" duration-500 transition-all"
                     onClick={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
@@ -177,6 +180,7 @@ function Navbar() {
             <div className="space-y-1 px-2 pt-2 pb-3">
               {navigation.map((item) => (
                 <Disclosure.Button
+                aria-label="mobile menu navigation"
                   key={item.name}
                   as="a"
                   href={item.href}
