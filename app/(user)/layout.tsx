@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     
-    <html >
+    <html lang="en" >
       <head />
       <body className="duration-300 transition-all">
       <ThemeProvider attribute="class" >
