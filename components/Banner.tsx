@@ -1,20 +1,13 @@
-import { useTheme } from "next-themes";
-
-import { MoonIcon } from "@heroicons/react/24/solid";
-
 function Banner() {
-  const { theme, setTheme } = useTheme();
 
-  return (
-    
-      <div >
-               
+  return (    
+      <div >         
     <div className="flex flex-col lg:flex-row lg:space-x-5 justify-between font-bold px-10 py-5 mb-10">
       <div>
         <h1 className="text-7xl">Youcef's Daily Blog</h1>
         <h2 className="mt-5 md:mt-2">
           Welcome to {""}
-          <span className="underline decoration-4 decoration-purple   ">
+          <span className="underline decoration-4 decoration-purple">
             favourite blog in the world
           </span>
         </h2>

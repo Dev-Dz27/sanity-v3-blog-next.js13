@@ -47,8 +47,8 @@ const Post = async ({ params: { slug } }: Props) => {
 
    const post: Post = await client.fetch(query, { slug });
    return (
-      <article className="px-10 ">
-         <section className="space-y-2 ">
+      <article className="px-10">
+         <section className="space-y-2">
             <div className="relative min-h-[14rem] flex flex-column md:flex-row justify-between">
                <div className="absolute top-0 w-full h-full opacity-10 blur-sm">
                   <Image
@@ -58,7 +58,7 @@ const Post = async ({ params: { slug } }: Props) => {
                      fill
                   />
                </div>
-               <section className="p-5 bg-opacity-30 bg-black backdrop-blur-lg rounded drop-shadow-lg w-full ">
+               <section className="p-5 bg-opacity-30 bg-black backdrop-blur-lg rounded drop-shadow-lg w-full">
                   <div className="flex flex-col md:flex-row justify-between gap-y-5">
                      <div>
                         <h1 className="text-4xl font-extrabold">
